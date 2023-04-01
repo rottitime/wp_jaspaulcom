@@ -1,8 +1,20 @@
 <?php
 
-
 // Enables theme support for document title tag
 add_theme_support( 'title-tag' );
+add_theme_support( 'custom-logo' );
+
+function jaspaulcom_menus() {
+    $locations = array(
+        'primary' => "Desktop Primary",
+        'footer' => "Footer Menu Items",
+        'socia;' => "Social Menu Items"
+    );
+
+    register_nav_menus( $locations );
+}
+
+add_action( 'init', 'jaspaulcom_menus' );
 
 function jaspaulcom_register_styles() {
     $version = wp_get_theme()->get( 'Version' );
