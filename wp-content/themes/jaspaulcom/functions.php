@@ -1,5 +1,9 @@
 <?php
 
+
+// Enables theme support for document title tag
+add_theme_support( 'title-tag' );
+
 function jaspaulcom_register_styles() {
     $version = wp_get_theme()->get( 'Version' );
     wp_enqueue_style( 'jaspaulcom-style', get_template_directory_uri() . '/style.css', array(), $version, 'all' );
