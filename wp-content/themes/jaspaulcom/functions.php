@@ -12,6 +12,8 @@ function is_dev() {
 }
         
 
+
+
 //add SVG to allowed file uploads
 function add_file_types_to_uploads($file_types){
 
