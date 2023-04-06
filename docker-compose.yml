@@ -19,6 +19,7 @@ services:
       - '8080:80'
     restart: always
     environment:
+      DEV_MODE: true
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: your_mysql_user_password
