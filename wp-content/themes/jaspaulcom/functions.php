@@ -5,6 +5,9 @@
 // Enables theme support for document title tag
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo' );
+add_theme_support( 'post-thumbnails' );
+
+
 
 //add SVG to allowed file uploads
 function add_file_types_to_uploads($file_types){
@@ -44,3 +47,22 @@ function jaspaulcom_register_scripts() {
 
 
 add_action( 'wp_enqueue_scripts', 'jaspaulcom_register_scripts' );
+
+
+function jaspaulcom_widget_areas() {
+    register_sidebar(
+        array(
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '',
+            'after_widget' => ''
+        ),
+        array(
+            'name' => 'Sidebar Area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+        )
+    );
+}
+
+add_action( 'widgets_init', 'jaspaulcom_widget_areas' );

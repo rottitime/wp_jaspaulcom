@@ -31,6 +31,10 @@ wp_nav_menu(
 ?>
 
 
+<?php
+dynamic_sidebar( 'sidebar-1' );
+?>
+
 <div class="foot">
 <h4>Follow me</h4>
 <ul>
