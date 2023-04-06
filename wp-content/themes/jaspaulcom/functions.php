@@ -2,6 +2,10 @@
 
 //TODO: https://www.youtube.com/watch?v=-h7gOJbIpmo&t=44s&ab_channel=freeCodeCamp.org
 
+$is_dev = strpos($_SERVER['HTTP_HOST'], 'localhost') !== false;
+
+
+
 // Enables theme support for document title tag
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo' );
