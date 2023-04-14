@@ -25,6 +25,8 @@ services:
       WORDPRESS_DB_PASSWORD: your_mysql_user_password
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_DEBUG: 1
+      WORDPRESS_DEBUG_LOG: 1
+      WORDPRESS_DEBUG_DISPLAY: 0
     volumes:
       - ./wp-content:/var/www/html/wp-content
 
