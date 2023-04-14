@@ -27,6 +27,8 @@ add_action('upload_mimes', 'add_file_types_to_uploads');
 
 function jaspaulcom_menus() {
     $locations = array(
+        'home_clients' => "Homepage clients",
+        'home_projects' => "Homepage projects",
         'primary' => "Desktop Primary",
         'footer' => "Footer Menu Items",
         'socia;' => "Social Menu Items"
@@ -56,18 +58,18 @@ add_action( 'wp_enqueue_scripts', 'jaspaulcom_register_scripts' );
 
 function jaspaulcom_widget_areas() {
     register_sidebar(
+
         array(
+            'name' => 'Sidebar Area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area',
             'before_title' => '',
             'after_title' => '',
             'before_widget' => '',
             'after_widget' => ''
-        ),
-        array(
-            'name' => 'Sidebar Area',
-            'id' => 'sidebar-1',
-            'description' => 'Sidebar Widget Area'
         )
     );
 }
 
 add_action( 'widgets_init', 'jaspaulcom_widget_areas' );
+
