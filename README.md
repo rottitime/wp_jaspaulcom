@@ -6,6 +6,6 @@
 
 ## Wordpress admin panel
 
-http://localhost/wp-admin/
+http://localhost:8080/wp-admin/
 u: admin
 p: admin
