@@ -10,19 +10,43 @@
 
 
 <?php
- if( have_posts() ):
-    while( have_posts() ): the_post(); ?>
+ if( have_posts() ): while( have_posts() ): the_post(); ?>
         <h1><?php the_title(); ?></h1>
-        <?php the_post(); ?>
+        <hr>
         <?php the_content(); ?>
-<?php endwhile;
-    endif;
+        <hr>
+<?php endwhile; endif; ?>
+
+<hr>
+*** 
+
+<?php
+global $wp_query;
+// $args = array(
+// 'category__and' => 'clients', //must use category id for this field
+// // 'tag__in' => 'post_tag', //must use tag id for this field
+// 'posts_per_page' => -1); //get all posts
+
+$args = array(
+	'numberposts'	=> 20,
+	'category'		=> 4
+);
+
+
+$posts = get_posts($args);
+foreach ($posts as $post) :
+        var_dump($post);
+endforeach;
 ?>
 
-
+***
+<hr>
+<?php 
+dynamic_sidebar( 'home-clients' );
+?>
 
 <!-- my portfolo -->
-<section class="center">
+<!-- <section class="center">
 <div class="container">
 <h2><a href="/portfolio/">My Clients</a></h2>
 <p>It has been a pleasure to work with some of the biggest recognised names. Each client has retained my services for long periods. For a full list visit the <a href="/portfolio/">portfolio</a>.</p>
@@ -44,7 +68,7 @@
 
 
 </div>
-</section>
+</section> -->
 
 <section class="center">
 <div class="container">

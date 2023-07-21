@@ -31,7 +31,7 @@ function jaspaulcom_menus() {
         'home_projects' => "Homepage projects",
         'primary' => "Desktop Primary",
         'footer' => "Footer Menu Items",
-        'socia;' => "Social Menu Items"
+        'social' => "Social Menu Items"
     );
 
     register_nav_menus( $locations );
@@ -57,8 +57,21 @@ add_action( 'wp_enqueue_scripts', 'jaspaulcom_register_scripts' );
 
 
 function jaspaulcom_widget_areas() {
-    register_sidebar(
 
+    register_sidebar(
+        array(
+            'name' => 'Homepage clients',
+            'id' => 'home-clients',
+            'description' => 'Homepage clients list',
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '',
+            'after_widget' => ''
+        )
+    );
+    
+
+    register_sidebar(
         array(
             'name' => 'Sidebar Area',
             'id' => 'sidebar-1',
