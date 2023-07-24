@@ -1,4 +1,8 @@
-<?php get_header() ?>
+<?php 
+get_header();
+
+$idClient  = 6;
+?>
 <div class="content">
 
 
@@ -20,24 +24,31 @@
 <hr>
 *** 
 
+
+<?php echo get_cat_name( $idClient );?>
+
+<div><?php echo category_description($idClient); ?></div> 
+
+
 <?php
-global $wp_query;
+
+        $args = array(
+        'category_and' => $idClient, //must use category id for this field
+        'tag__in' => '8', //must use tag id for this field
+        'posts_per_page' => -1); //get all posts
+
+
+
 // $args = array(
-// 'category__and' => 'clients', //must use category id for this field
-// // 'tag__in' => 'post_tag', //must use tag id for this field
-// 'posts_per_page' => -1); //get all posts
-
-$args = array(
-	'numberposts'	=> 20,
-	'category'		=> 4
-);
+// 	'numberposts'	=> 20,
+// 	'category'		=> 4
+// );
 
 
-$posts = get_posts($args);
-foreach ($posts as $post) :
-        var_dump($post);
-endforeach;
-?>
+$myposts = get_posts($args);
+foreach ($myposts as $post) :?>
+         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endforeach; ?>
 
 ***
 <hr>
