@@ -6,14 +6,12 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
 
-//detect if dev mode for loading js files
+//detect if dev mode
 function is_dev() {
-    return getenv('DEV_MODE');
+    return boolval(getenv('DEV_MODE'));
 }
-define( 'is_dev', is_dev );
-
         
-add_action('wp_enqueue_scripts', 'is_dev');
+define( 'is_dev', is_dev() );
 
 
 //add SVG to allowed file uploads
