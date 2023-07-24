@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     port: 5174
   },
-  plugins: [svgLoader({ defaultImport: 'raw' }), liveReload('**/*.php')],
+  plugins: [svgLoader({ defaultImport: 'raw' }), liveReload(['**/*.php', './style.css'])],
   css: {
     postcss: {
       plugins: [postcssNesting, postcssCustomMedia]
@@ -19,9 +19,9 @@ export default defineConfig({
     outDir: './dist',
     rollupOptions: {
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`
+        entryFileNames: `[name].js`,
+        chunkFileNames: `[name].js`,
+        assetFileNames: `[name].[ext]`
       }
     }
   }

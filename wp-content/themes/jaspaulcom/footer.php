@@ -47,6 +47,7 @@ dynamic_sidebar( 'sidebar-1' );
 </div>
 
 </nav>
+<script type="module" src="/src/main.ts"></script>
 <?php 
     wp_footer();
 ?>
