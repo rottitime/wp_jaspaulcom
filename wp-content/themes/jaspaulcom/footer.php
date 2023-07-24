@@ -1,25 +1,29 @@
 <header class="main-nav">
-<h2><a rel="home" href="/">
+<h2>
 <?php 
-        if ( has_custom_logo() ) {
-            the_custom_logo();
-        } 
+if ( has_custom_logo() ) {
+    the_custom_logo();
+} 
 ?>
 <?php 
 echo get_bloginfo( 'name' );
-?>
-</a></h2>
+?></h2>
 <button>Menu</button>
 
 <nav>
 
-<div class="head">
+
+<?php
+dynamic_sidebar( 'main-menu' );
+?>
+
+<!-- <div class="head">
 <img src="https://www.jaspaul.com/images/114.png" alt="Profile picture" width="528" height="560" />
 <h4>Jaspaul Aggarwal</h4>
 <h5>Web Developer</h5>
-</div>
+</div> -->
 
-<?php
+<!-- <?php
 wp_nav_menu(
     array(
         'theme_location' => 'primary',
@@ -28,12 +32,8 @@ wp_nav_menu(
         'items_wrap' => '<ul class="menu">%3$s</ul>',
     )
 );
-?>
+?> -->
 
-
-<?php
-dynamic_sidebar( 'sidebar-1' );
-?>
 
 <div class="foot">
 <h4>Follow me</h4>
@@ -47,7 +47,9 @@ dynamic_sidebar( 'sidebar-1' );
 </div>
 
 </nav>
-<script type="module" src="/src/main.ts"></script>
+</header>
+
+<!-- <script type="module" src="/src/main.ts"></script> -->
 <?php 
     wp_footer();
 ?>

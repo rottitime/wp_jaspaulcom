@@ -17,7 +17,11 @@ wp_head();
   gtag('config', 'G-2VLG0J5DFX');
 </script>
 
-<?php if (is_dev): ?>
+<?php 
+
+
+
+if (is_dev): ?>
     <!-- loaclhost vite files -->
     <script type="module" src="http://localhost:5174/src/main.ts" defer></script>
 <?php else: ?>

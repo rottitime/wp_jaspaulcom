@@ -6,12 +6,14 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'custom-logo' );
 add_theme_support( 'post-thumbnails' );
 
-//detect if dev mode
+//detect if dev mode for loading js files
 function is_dev() {
     return getenv('DEV_MODE');
 }
-        
+define( 'is_dev', is_dev );
 
+        
+add_action('wp_enqueue_scripts', 'is_dev');
 
 
 //add SVG to allowed file uploads
@@ -60,6 +62,19 @@ function jaspaulcom_widget_areas() {
 
     register_sidebar(
         array(
+            'name' => 'Main menu',
+            'id' => 'main-menu',
+            'description' => 'Top header menu',
+            'before_title' => '',
+            'after_title' => '',
+            'before_widget' => '',
+            'after_widget' => ''
+        )
+    );
+
+
+    register_sidebar(
+        array(
             'name' => 'Homepage clients',
             'id' => 'home-clients',
             'description' => 'Homepage clients list',
@@ -71,17 +86,7 @@ function jaspaulcom_widget_areas() {
     );
     
 
-    register_sidebar(
-        array(
-            'name' => 'Sidebar Area',
-            'id' => 'sidebar-1',
-            'description' => 'Sidebar Widget Area',
-            'before_title' => '',
-            'after_title' => '',
-            'before_widget' => '',
-            'after_widget' => ''
-        )
-    );
+
 }
 
 add_action( 'widgets_init', 'jaspaulcom_widget_areas' );
