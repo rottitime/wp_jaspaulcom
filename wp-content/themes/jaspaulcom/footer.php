@@ -1,4 +1,20 @@
 
+<section class="main-foot">
+<div class="container">
+<h2><a rel="home" href="https://www.jaspaul.com/">
+<img src="/inc/img/v3/logo.svg" alt="logo">
+
+</a></h2>
+<ul>
+<li class="fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/jasagg/" title="LinkedIn"></a></li>
+<li class="fa-brands fa-twitter"><a href="https://twitter.com/rotti_time" title="Twitter"></a></li>
+<li class="fa-solid fa-rss"><a href="/rss/" title="RSS"></a></li>
+</ul>
+</div>
+<p>&#169; 2022 Jaspaul Aggarwal | Valid <a href="http://validator.w3.org/check?uri=https://www.jaspaul.com/" rel="external">HTML5</a></p>
+
+</section>
+
 <header class="main-nav">
 <h2>
 <?php  custom_logo_with_site_name_link(); ?>
@@ -44,7 +60,7 @@ wp_nav_menu(
 </nav>
 </header>
 
-<!-- <script type="module" src="/src/main.ts"></script> -->
+
 <?php 
     wp_footer();
 ?>

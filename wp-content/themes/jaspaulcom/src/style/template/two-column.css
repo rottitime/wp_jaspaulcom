@@ -4,7 +4,7 @@
     display: flex;
   }
 
-  .col {
+  & .col {
     @media (--viewport-tablet) {
       width: 50%;
     }
@@ -24,7 +24,7 @@
     }
   }
 
-  .map {
+  & .map {
     width: 100%;
     border: 0;
     height: 450px;
