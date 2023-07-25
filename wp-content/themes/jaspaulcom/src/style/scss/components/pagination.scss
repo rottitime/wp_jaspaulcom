@@ -1,0 +1,21 @@
+.pagination {
+
+	width: 100%;
+	display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+
+	.next:after {
+		@include icon($fa-var-chevron-circle-right);
+		margin-left: $pagiantion-icon-spacing;
+		font-size: 20px;
+    	vertical-align: middle;
+	}
+	.prev:before {
+		@include icon($fa-var-chevron-circle-left);
+		margin-right: $pagiantion-icon-spacing;
+		font-size: 20px;
+    	vertical-align: middle;
+	}
+
+}

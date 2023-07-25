@@ -1,0 +1,122 @@
+
+
+@font-face {
+  font-family: 'ja default';
+  src: url($main-path-fonts+'Muli-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url($main-path-fonts+'Muli-Light.woff') format('woff'); /* Legacy iOS */
+       font-weight: normal;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ja header';
+  src: url($main-path-fonts+'RobotoSlab-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url($main-path-fonts+'RobotoSlab-Bold.woff') format('woff'); /* Legacy iOS */
+       font-weight: normal;
+       font-style: normal;
+}
+
+
+html {
+	height: 100%;
+}
+
+// #jatest{
+// 	border:1px solid green;
+// 	background:url($main-path-images+'bg1.png');
+// }
+
+body {
+	margin: 0;
+    line-height: 25px;
+    font-family: $font-style-simple;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: $font-style-fancy;
+	color: $font-black;
+	// text-transform: uppercase;
+	line-height: 1;
+}
+
+h1, h2, h3, h4, h5, ol, p, ul {
+	margin-top: 0;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+	font-size: 45px;
+}
+
+h4 {
+	font-size: 35px;
+}
+
+h5 {
+	font-size: 30px;
+}
+
+ol, p, ul {
+	font-size: 17px;
+	margin-bottom: $content-spacing;
+	line-height: 35px;
+}
+
+ol, ul {
+	padding: 0;
+}
+
+a {
+	cursor: pointer;
+	color: $blue;
+	text-decoration: none;
+	transition: color 0.5s;
+	&:hover {
+		color: $blue-light;
+	}
+}
+
+li {
+	list-style: none;
+	margin-bottom: 5px;
+}
+
+button {
+	cursor: pointer;
+}
+
+section {
+	&.center {
+		text-align: center;
+	}
+}
+
+// img {
+// 	&.full {
+// 		max-width: 80%;
+// 		border:$img-border-width solid $white;
+// 		box-shadow: 0 3px 12px 0.06px $box-shadow-color;
+// 		border-radius: 4px;
+// 		margin-bottom: $page-spacing-y;
+// 		@media #{$tablet} {
+// 			margin-right: $page-spacing-x;
+// 			width: calc(100% - #{$img-border-width});
+// 			max-width: 40%;
+// 			float: left;
+// 		}
+
+
+// 	}
+// }
+
+@-webkit-keyframes loader-spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes loader-spin { 100% { transform:rotate(360deg); } }
+
+
+@-webkit-keyframes banner-shrink { 100% { background-size:100%; } }
+@keyframes banner-shrink { 100% { background-size:100%; } }

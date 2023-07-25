@@ -1,0 +1,105 @@
+.banner {
+    padding: 50px 0 0 0;
+	background: $bg-black url($main-path-images+'bg1.png') center fixed;
+	background-size: 200%;
+	text-align: center;
+    -webkit-animation: banner-shrink 20s;
+    animation: banner-shrink 20s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards; 
+	
+
+	h1 {
+	    color: $font-white;
+	    line-height: 1;
+	    font-size: 40px;
+	    font-weight: 900;
+	    letter-spacing: 4px;
+	    // text-transform: uppercase;
+	    display: inline-block;
+	    margin-bottom: 14px;
+	    @media #{$tablet} {
+	    	font-size: 110px;
+	    }
+
+		small {
+			display: block;
+			text-align: left;
+			color: $font-white;
+			font-size: 15px;
+			font-weight: 700;
+			margin-bottom: 12px;
+			letter-spacing: 0;
+			font-family: $font-style-simple;
+			@media #{$tablet} {
+				font-size: 20px;
+			}
+			@media #{$desktop} {
+				padding-left: 10%;
+			}
+		}
+	}
+
+	/*
+	p {
+		color: rgba($font-white,.8);
+		letter-spacing: 1px;
+		margin-bottom: 14px;
+		font-size: 13px;
+		font-weight: 500;
+		font-style: normal;
+		line-height: 1.5;
+		text-transform: uppercase;
+	}*/
+
+	p {
+	    display: inline-block;
+	    padding: 7px 15px 8px;
+	    border-top: 1px solid rgba($white,.07);
+	    border-bottom: 1px solid rgba($white,.07);
+	    margin-bottom: 60px;
+	    display: block;
+	    font-size: 9px;
+	    font-style: normal;
+	    font-weight: 700;
+	    color: rgba($white,.6);
+	    letter-spacing: 3.8px;
+	    text-transform: uppercase;
+	    @media #{$tablet} {
+	    	font-size: 13px;
+	    }
+	}
+
+	.button {
+		margin: 0 0 -10px 0;
+	}
+
+	&.left {
+
+	    @media #{$tablet} {
+	    	text-align: left;
+	    }
+		h1 {
+			font-size: 48px;
+			margin-bottom: 21px;
+		}
+		p {
+			border: 0;
+			padding: 0;
+			font-size: 13px;
+		    text-transform: uppercase;
+			color: rgba($font-white,.8);
+			letter-spacing: 1px;
+		}
+
+	}
+
+	.container {
+		padding: $page-spacing-y $page-spacing-x;
+		padding: 40px 0 20px;
+    	max-width: 80%;
+    	@media #{$tablet} {
+    		padding: 40px 20px;
+    	}
+	}
+}

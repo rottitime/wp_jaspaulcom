@@ -15,7 +15,9 @@ export default defineConfig({
     postcss: {
       plugins: [
         postcssNesting,
-        postcssCustomMedia,
+        postcssCustomMedia({
+          importFrom: ['src/style/vars-viewport.css']
+        }),
         postcssInlineSvg({
           paths: ['public/svg']
         })

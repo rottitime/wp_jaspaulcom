@@ -1,0 +1,21 @@
+/* HTML Template specific styles */
+
+.two-col-sidebar {
+	@media #{$tablet} {
+		display: flex;
+		> section:first-child {
+			width: 75%;
+			padding-right: 15px;
+		}
+	}
+	.sidebar {
+		display: none;
+		@media #{$tablet} {
+			display: block;
+			width: 25%;
+			padding-left: 15px;
+		}
+	}
+}
+
+

@@ -1,0 +1,2 @@
+@custom-media --viewport-tablet (min-width: 768px);
+@custom-media --viewport-desktop (min-width: 1000px);
