@@ -4,6 +4,7 @@ import postcssCustomMedia from 'postcss-custom-media'
 // eslint-disable-next-line import/no-named-as-default
 import liveReload from 'vite-plugin-live-reload'
 import svgLoader from 'vite-svg-loader'
+import postcssInlineSvg from 'postcss-inline-svg'
 
 export default defineConfig({
   server: {
@@ -12,7 +13,13 @@ export default defineConfig({
   plugins: [svgLoader({ defaultImport: 'raw' }), liveReload(['**/*.php', './style.css'])],
   css: {
     postcss: {
-      plugins: [postcssNesting, postcssCustomMedia]
+      plugins: [
+        postcssNesting,
+        postcssCustomMedia,
+        postcssInlineSvg({
+          paths: ['public/svg']
+        })
+      ]
     }
   },
   build: {

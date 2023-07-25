@@ -4,6 +4,13 @@ body {
   font-family: var(--fonts-main);
 }
 
+/* * {
+  &:before {
+    content: svg-load('pencil.svg', width=20, height=20, fill=#cc0000);
+    color: red;
+  }
+} */
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
