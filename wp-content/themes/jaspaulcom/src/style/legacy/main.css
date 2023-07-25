@@ -1,4 +1,20 @@
 @charset "UTF-8";
+
+@font-face {
+  font-family: ja default;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/4535f17e4fe7ec00e0c5.woff2) format('woff2'),
+    url(fonts/003862ccef538a13f7d3.woff) format('woff');
+}
+@font-face {
+  font-family: ja header;
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/0288523215b94864ddb9.woff2) format('woff2'),
+    url(fonts/bee276281b97abf17291.woff) format('woff');
+}
+
 html.with-featherlight {
   overflow: hidden;
 }
@@ -189,7 +205,7 @@ html.with-featherlight {
 .slick-loading .slick-list {
   background: #fff url(fb6f3c230cb846e25247.gif) 50% no-repeat;
 }
-@font-face {
+/* @font-face {
   font-family: slick;
   font-style: normal;
   font-weight: 400;
@@ -198,7 +214,7 @@ html.with-featherlight {
     url(295183786cd8a1389865.woff) format('woff'),
     url(c94f7671dcc99dce43e2.ttf) format('truetype'),
     url(2630a3e3eab21c607e21.svg#slick) format('svg');
-}
+} */
 .slick-next,
 .slick-prev {
   border: none;
@@ -6203,14 +6219,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 :root {
   --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
 }
-@font-face {
+/* @font-face {
   font-display: block;
   font-family: Font Awesome\6 Free;
   font-style: normal;
   font-weight: 900;
   src: url(59edf72a325ac2048d60.woff2) format('woff2'),
     url(e615bbcb258550973c16.ttf) format('truetype');
-}
+} */
 .fa-solid,
 .fas {
   font-family: Font Awesome\6 Free;
@@ -6224,14 +6240,14 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 :root {
   --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
 }
-@font-face {
+/* @font-face {
   font-display: block;
   font-family: Font Awesome\6 Brands;
   font-style: normal;
   font-weight: 400;
   src: url(ebb7a127d2d8ee6f1832.woff2) format('woff2'),
     url(b823fc0dbb5a5f0c21bb.ttf) format('truetype');
-}
+} */
 .fa-brands,
 .fab {
   font-family: Font Awesome\6 Brands;
@@ -7632,20 +7648,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
 .fa-zhihu:before {
   content: '';
 }
-@font-face {
-  font-family: ja default;
-  font-style: normal;
-  font-weight: 400;
-  src: url(4535f17e4fe7ec00e0c5.woff2) format('woff2'),
-    url(003862ccef538a13f7d3.woff) format('woff');
-}
-@font-face {
-  font-family: ja header;
-  font-style: normal;
-  font-weight: 400;
-  src: url(0288523215b94864ddb9.woff2) format('woff2'),
-    url(bee276281b97abf17291.woff) format('woff');
-}
+
 html {
   height: 100%;
 }

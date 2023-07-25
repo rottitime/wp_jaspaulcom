@@ -1,4 +1,7 @@
-import './style.css'
+// eslint-disable-next-line import/no-unresolved
+import './style/vars.css'
+import './style/style.css'
+
 // import typescriptLogo from './typescript.svg'
 
 import { setupCounter } from './counter'
