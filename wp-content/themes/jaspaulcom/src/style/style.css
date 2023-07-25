@@ -69,7 +69,7 @@ ol,
 p,
 ul {
   font-size: 17px;
-  margin-bottom: $content-spacing;
+  margin-bottom: var(--content-spacing);
   line-height: 35px;
 }
 

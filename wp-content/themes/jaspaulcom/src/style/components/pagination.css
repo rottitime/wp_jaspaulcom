@@ -1,21 +1,22 @@
 .pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
 
-	width: 100%;
-	display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+  & .next:after,
+  & .prev:before {
+    content: svg-load('circle-chevron-left.svg', fill=#328cc1, width=18, height=18);
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+  }
 
-	.next:after {
-		@include icon($fa-var-chevron-circle-right);
-		margin-left: $pagiantion-icon-spacing;
-		font-size: 20px;
-    	vertical-align: middle;
-	}
-	.prev:before {
-		@include icon($fa-var-chevron-circle-left);
-		margin-right: $pagiantion-icon-spacing;
-		font-size: 20px;
-    	vertical-align: middle;
-	}
-
+  & .next:after {
+    transform: rotate(180deg);
+    margin-left: var(--pagiantion-icon-spacing);
+  }
+  & .prev:before {
+    margin-right: var(--pagiantion-icon-spacing);
+  }
 }

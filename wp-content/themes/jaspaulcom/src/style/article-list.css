@@ -32,7 +32,7 @@
 
     //image
     > a {
-      margin-bottom: $content-spacing;
+      margin-bottom: var(--content-spacing);
       height: 200px;
       display: flex;
       align-items: center;
