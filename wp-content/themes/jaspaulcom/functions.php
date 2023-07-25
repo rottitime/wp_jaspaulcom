@@ -89,3 +89,28 @@ function jaspaulcom_widget_areas() {
 
 add_action( 'widgets_init', 'jaspaulcom_widget_areas' );
 
+
+
+
+/** TOOLS  **/
+function custom_logo_with_site_name_link() {
+
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    
+
+    // Get the custom logo HTML
+    $custom_logo = $image[0];
+
+    // Get the site name
+    $site_name = get_bloginfo('name');
+
+    // Get the site URL
+    $site_url = esc_url(home_url('/'));
+
+    // Create the homepage link with custom logo and site name
+    $homepage_link = '<a href="' . $site_url . '" rel="home"><img src="'.$custom_logo.'" alt="logo" />' .  $site_name  . '</a>';
+
+    // Output the homepage link
+    echo $homepage_link;
+}
