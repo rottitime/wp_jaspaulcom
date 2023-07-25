@@ -78,7 +78,8 @@ ul {
   padding: 0;
 }
 
-a {
+a,
+.main-nav button {
   cursor: pointer;
   color: $blue;
   text-decoration: none;

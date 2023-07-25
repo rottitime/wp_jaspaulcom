@@ -1,11 +1,3 @@
-/* * {
-  background-color: green;
-
-  @media (--viewport-tablet) {
-    background-color: red;
-  }
-} */
-
 .two-col-sidebar {
   @media (--viewport-tablet) {
     display: flex;

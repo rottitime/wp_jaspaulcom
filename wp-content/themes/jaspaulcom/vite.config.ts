@@ -5,6 +5,7 @@ import postcssCustomMedia from 'postcss-custom-media'
 import liveReload from 'vite-plugin-live-reload'
 import svgLoader from 'vite-svg-loader'
 import postcssInlineSvg from 'postcss-inline-svg'
+import postcssColorModFunction from 'postcss-color-mod-function'
 
 export default defineConfig({
   server: {
@@ -16,7 +17,10 @@ export default defineConfig({
       plugins: [
         postcssNesting,
         postcssCustomMedia({
-          importFrom: ['src/style/vars-viewport.css']
+          importFrom: 'src/style/vars.css'
+        }),
+        postcssColorModFunction({
+          importFrom: 'src/style/vars.css'
         }),
         postcssInlineSvg({
           paths: ['public/svg']

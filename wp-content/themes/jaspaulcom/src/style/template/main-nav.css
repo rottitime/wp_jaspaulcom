@@ -1,6 +1,6 @@
 .main-nav {
   padding: 14px 15px;
-  background-color: rgba($bg-black, 0.9);
+  background-color: color-mod(var(--bg-black) a(0.9));
   position: fixed;
   width: 100%;
   left: 0;
@@ -16,7 +16,7 @@
     padding: 14px 25px;
   }
 
-  h2 {
+  & h2 {
     margin: 0;
     font-size: 35px;
     img {
@@ -26,12 +26,11 @@
     }
   }
 
-  ul {
+  & ul {
     margin: 0;
   }
 
-  button {
-    @extend a;
+  & button {
     position: relative;
     z-index: 1;
     border: 0;
@@ -69,9 +68,9 @@
     transition: all 0.3s;
     width: 90%;
     max-width: 320px;
-    background-color: rgba($white, 0.9);
+    background-color: color-mod(var(--white) a(0.9));
     transition: all 0.3s;
-    box-shadow: 0 3px 20px 6px $box-shadow-color;
+
     color: $font-black;
     @media (--viewport-desktop) {
       position: static;
@@ -82,33 +81,33 @@
       max-width: 100%;
     }
 
-    h4,
-    h5 {
+    & h4,
+    & h5 {
       text-transform: uppercase;
       font-family: $font-style-simple;
       color: inherit;
     }
 
-    h4 {
+    & h4 {
       font-size: 15px;
       font-weight: bold;
       margin-bottom: 7px;
     }
 
-    h5 {
+    & h5 {
       font-size: 13px;
       font-weight: normal;
       margin-bottom: 0;
     }
 
-    img {
+    & img {
       border-radius: 50%;
       margin-bottom: 20px;
       width: 180px;
       height: 180px;
     }
 
-    .head {
+    & .head {
       padding: 40px 30px;
       background-color: $bg-black;
       color: $font-white;
@@ -118,14 +117,14 @@
       }
     }
 
-    .menu {
+    & .menu {
       padding: 28px 0;
       @media (--viewport-desktop) {
         padding: 0;
         display: flex;
       }
 
-      a {
+      & a {
         border-left: 4px solid transparent;
         padding: 10px 26px 11px 30px;
         position: relative;
@@ -142,7 +141,7 @@
           letter-spacing: 0.7px;
         }
 
-        //icon
+        /* icon */
         &:before {
           font-size: 21px;
           margin-right: 30px;
@@ -152,7 +151,7 @@
           }
         }
       }
-      li {
+      & li {
         margin-bottom: 12px;
         @media (--viewport-desktop) {
           display: inline-block;
@@ -174,21 +173,21 @@
           }
         }
       }
-    } //end .menu
+    }
 
-    .foot {
+    & .foot {
       padding: 0 30px 0 30px;
       @media (--viewport-desktop) {
         display: none;
       }
 
-      h4 {
+      & h4 {
         font-size: 13px;
         margin-bottom: 22px;
         font-style: normal;
       }
 
-      li {
+      & li {
         display: inline-block;
         margin-bottom: 10px;
         margin-right: 28px;
