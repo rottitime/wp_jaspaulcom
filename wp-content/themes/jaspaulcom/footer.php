@@ -1,13 +1,25 @@
+<?php 
+function custom_logo_with_site_name_link() {
+    // Get the custom logo HTML
+    $custom_logo = get_custom_logo();
+    // Get the site name
+    $site_name = get_bloginfo('name');
+    // Get the site URL
+    $site_url = esc_url(home_url('/'));
+    // Create the homepage link with custom logo and site name
+    $homepage_link = '<a href="' . $site_url . '">' . $custom_logo . $site_name . '</a>';
+    // Output the homepage link
+    echo $homepage_link;
+}
+
+?>
+
 <header class="main-nav">
 <h2>
 <?php 
-if ( has_custom_logo() ) {
-    the_custom_logo();
-} 
+echo custom_logo_with_site_name_link();
 ?>
-<?php 
-echo get_bloginfo( 'name' );
-?></h2>
+</h2>
 <button>Menu</button>
 
 <nav>
