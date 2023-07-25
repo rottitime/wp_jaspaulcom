@@ -4,18 +4,18 @@
   --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  //urls
+  /* urls */
   /* $main-path: './' !default; */
   /* $main-path-images: '../images/' !default; */
   /* $main-path-fonts: './fonts/' !default; */
 
   /* Media queries */
 
-  //Site colours
-  --main-color1: #0b3c5d; //Prussian blue
-  --main-color2: #328cc1; //Sky blue
-  --main-color3: #d98310; //Gold leaf
-  --main-color4: #1d2731; //ivory black
+  /* Site colours */
+  --main-color1: #0b3c5d; /* Prussian blue */
+  --main-color2: #328cc1; /* Sky blue */
+  --main-color3: #d98310; /* Gold leaf */
+  --main-color4: #1d2731; /* ivory black */
 
   --black: var(--main-color4);
   --black-light: #454646;
@@ -27,7 +27,7 @@
   --main-color: #5c5882;
   --grey: #cacfd2;
 
-  //fonts
+  /* fonts */
   --font-white: var(--white);
   --font-black: var(--black-light);
   --font-dark: var(--blue);
@@ -35,23 +35,23 @@
   --font-style-simple: 'ja default', 'Open Sans', sans-serif;
   --font-style-fancy: 'ja header', sans-serif;
 
-  //backgrounds
+  /* backgrounds */
   --bg-black: var(--black);
   --bg-white: var(--white);
 
-  //image settings
+  /* image settings */
   --img-border-width: 8px;
 
-  //page settings
-  --page-spacing-y: 30px; //downwards
-  --page-spacing-x: 20px; //sideways
+  /* page settings */
+  --page-spacing-y: 30px; /* downwards */
+  --page-spacing-x: 20px; /* sideways */
   --box-shadow-color: rgba($black, 0.26);
   --content-spacing: 15px;
 
-  //Individual items
+  /* Individual items */
   --info-spacing: 5px;
 
-  //Components
+  /* Components */
   --score-color: var(--main-color1);
   --score-spacing: 10px;
 
@@ -62,6 +62,6 @@
   --carousel-button-size: 46px;
   --carousel-arrow-position: 3%;
 
-  //Third party variables
+  /* Third party variables */
   /* $fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; */
 }
