@@ -15,26 +15,24 @@
     border-bottom: none;
   }
 
-  ol,
-  p,
-  ul {
+  & :is(ol, p, ul) {
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  iframe {
+  & iframe {
     display: block;
     margin: 0 auto;
   }
 }
 
-.button {
+& .button {
   padding: 6px 35px;
-  color: $font-white;
+  color: var(--font-white);
   font-size: 14px;
-  background-color: $gold;
-  box-shadow: 0 3px 4.7px 0.3px rgba($white, 0.24);
+  background-color: var(--gold);
+  box-shadow: 0 3px 4.7px 0.3px color-mod(var(--white) a(0.24));
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 2px;
@@ -42,28 +40,28 @@
   letter-spacing: 0;
   display: inline-block;
   &:hover {
-    color: $font-white;
+    color: var(--font-white);
   }
   &[class*='#{$fa-css-prefix}-']:before {
     margin-right: 5px;
   }
 }
 
-.content {
-  .scores {
+& .content {
+  & .scores {
     display: flex;
     flex-wrap: wrap;
-    margin: -#{$score-spacing} -#{$score-spacing * 2};
+    margin: var(--score-spacing) var(--score-spacing) * 2;
     justify-content: center;
     padding-left: 0;
 
-    .score {
+    & .score {
       padding: 15px;
-      background-color: $white;
+      background-color: var(--white);
       border-radius: 6px;
       width: calc(50% - #{$score-spacing * 2});
       box-shadow: 0 1px 4px $box-shadow-color;
-      color: $font-black;
+      color: var(--font-black);
       font-style: normal;
       text-transform: uppercase;
       font-size: 12px;
@@ -79,18 +77,18 @@
       }
 
       &:before {
-        color: $score-color;
+        color: var(--score-color);
         font-size: 48px;
         margin: 0 auto 26px;
         display: block;
       }
     }
-    .bar {
+    & .bar {
       width: 130px;
       height: 10px;
       margin: 0 auto;
       border-radius: 10px;
-      background-color: $grey;
+      background-color: var(--grey);
       position: relative;
       margin-top: 13px;
       min-width: 80%;
@@ -107,81 +105,22 @@
         border-radius: 10px;
       }
 
-      //progress bar background
+      /* progress bar background */
       &:before {
         width: 100%;
-        background-color: $grey;
+        background-color: var(--grey);
       }
 
-      //progress status
+      /* progress status */
       &:after {
         width: inherit;
-        background-color: $score-color;
+        background-color: var(--score-color);
       }
-    } //end .bar
-  } //end .score
-
-  /* //out of scrope
-    .snippets {
-        article {
-            margin-bottom: 30px;
-            padding: 20px 20px 0;
-            border-radius: 10px;
-            background-color: $white;
-            box-shadow: 0 1px 4px $box-shadow-color;
-            padding: 20px;
-            text-align: left;
-        }
-        header {
-            padding-bottom: 20px;
-            border-bottom: 1px solid $box-shadow-color;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            img {
-                max-width: 50px;
-                max-height: 50px;
-                margin-right: 10px;
-                border-radius: 50%;
-            }
-        }
-        h3 {
-            color: $main-color1;
-            font-size: 18px;
-            font-weight: 700;
-            font-family: Roboto,Helvetica,Arial,sans-serif;
-            font-style: normal;
-            margin: 0 10px 0 0;
-        }
-
-        small, time {
-            color: $font-black;
-            font-size: 13px;
-            font-weight: 400;
-            font-style: normal;
-            display: block;
-        }
-        p, time {
-            font-size: 13px;
-            font-weight: 400;
-            font-style: normal;
-        }
-        img {
-            width: 100%;
-        }
-
-        small {
-            margin-top: 7px;
-        }
-        time {
-            align-self: flex-end;
-        }
-
     }
-    */
-} // end .content
+  }
+}
 
-.video {
+& .video {
   width: 100%;
   margin-bottom: $content-spacing;
   iframe {
@@ -189,24 +128,24 @@
   }
 }
 
-.sidebar {
-  h4 {
+& .sidebar {
+  & h4 {
     font-size: 18px;
     margin-bottom: 7px;
   }
-  h5 {
+  & h5 {
     margin-bottom: 7px;
     font-size: 13px;
   }
-  li {
+  & li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba($font-black, 0.07);
+    border-bottom: 1px solid color-mod(var(--font-black) a(0.07));
     &:before {
       content: normal;
     }
   }
-  time {
-    color: $font-grey;
+  & time {
+    color: var(--font-grey);
     font-size: 11px;
     font-weight: normal;
   }
