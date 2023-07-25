@@ -1,0 +1,25 @@
+/* * {
+  background-color: green;
+
+  @media (--viewport-tablet) {
+    background-color: red;
+  }
+} */
+
+.two-col-sidebar {
+  @media (--viewport-tablet) {
+    display: flex;
+    & > section:first-child {
+      width: 75%;
+      padding-right: 15px;
+    }
+  }
+  .sidebar {
+    display: none;
+    @media (--viewport-tablet) {
+      display: block;
+      width: 25%;
+      padding-left: 15px;
+    }
+  }
+}

@@ -110,7 +110,7 @@ section {
 // 		box-shadow: 0 3px 12px 0.06px $box-shadow-color;
 // 		border-radius: 4px;
 // 		margin-bottom: $page-spacing-y;
-// 		@media #{$tablet} {
+// 		@media (--viewport-tablet) {
 // 			margin-right: $page-spacing-x;
 // 			width: calc(100% - #{$img-border-width});
 // 			max-width: 40%;

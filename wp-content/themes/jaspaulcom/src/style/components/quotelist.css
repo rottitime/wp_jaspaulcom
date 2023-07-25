@@ -1,0 +1,25 @@
+.content .quote-list {
+    font-weight: 400;
+
+    img {
+        border-radius: 50%;
+        height: 110px;
+        width: 110px;
+        margin: 0 auto 40px;
+    }
+    blockquote {
+        padding: 0;
+        margin-bottom: 36px;
+    }
+    cite {
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    li {
+        padding: 0;
+        &:before {
+            content:normal;
+        }
+    }
+}

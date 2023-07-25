@@ -1,0 +1,45 @@
+.icon-list {
+  @media (--viewport-tablet) {
+    display: flex;
+  }
+  li {
+    position: relative;
+    padding-left: 62px;
+    box-sizing: border-box;
+    margin-bottom: 60px;
+    @media (--viewport-tablet) {
+      padding-left: 92px;
+      width: 33.33333333333333%;
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Icon */
+    &:before {
+      font-size: 40px;
+      position: absolute;
+      left: 0;
+      border-right: 1px solid $grey;
+      height: 100%;
+      display: flex;
+      vertical-align: middle;
+      align-items: center;
+      padding: 0 15px 0 0;
+      color: $blue;
+      @media (--viewport-tablet) {
+        padding: 0 30px 0 0;
+      }
+    }
+
+    h4 {
+      margin-bottom: 7px;
+    }
+
+    a {
+      font-size: 13px;
+    }
+  }
+}
