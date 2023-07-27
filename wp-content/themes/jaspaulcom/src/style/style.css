@@ -33,7 +33,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: $font-black;
+  color: var(--font-black);
   /* text-transform: uppercase; */
   line-height: 1;
 }
@@ -81,11 +81,11 @@ ul {
 a,
 .main-nav button {
   cursor: pointer;
-  color: $blue;
+  color: var(--blue);
   text-decoration: none;
   transition: color 0.5s;
   &:hover {
-    color: $blue-light;
+    color: var(--blue-light);
   }
 }
 
