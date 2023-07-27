@@ -22,8 +22,6 @@
 <button>Menu</button>
 
 <nav>
-
-
 <?php
 dynamic_sidebar( 'main-menu' );
 ?>
@@ -32,9 +30,9 @@ dynamic_sidebar( 'main-menu' );
 <img src="https://www.jaspaul.com/images/114.png" alt="Profile picture" width="528" height="560" />
 <h4>Jaspaul Aggarwal</h4>
 <h5>Web Developer</h5>
-</div> -->
-
-<!-- <?php
+</div> 
+<?php
+/*
 wp_nav_menu(
     array(
         'theme_location' => 'primary',
@@ -43,6 +41,7 @@ wp_nav_menu(
         'items_wrap' => '<ul class="menu">%3$s</ul>',
     )
 );
+*/
 ?> -->
 
 
@@ -56,8 +55,8 @@ wp_nav_menu(
 <li><a href="#/information/contact.html" class="fa-envelope-open-o" title="Contact"></a></li>
 </ul>
 </div>
-
 </nav>
+
 </header>
 
 

@@ -51,7 +51,7 @@
     &.active {
       &:before {
         content: $fa-var-close;
-        color: $blue-light;
+        color: var(--blue-light);
       }
 
       + nav {
@@ -60,7 +60,7 @@
     }
   }
 
-  nav {
+  & nav {
     position: fixed;
     top: 0;
     right: -100%;
@@ -71,7 +71,7 @@
     background-color: color-mod(var(--white) a(0.9));
     transition: all 0.3s;
 
-    color: $font-black;
+    color: var(--font-black);
     @media (--viewport-desktop) {
       position: static;
       background-color: transparent;
@@ -109,8 +109,8 @@
 
     & .head {
       padding: 40px 30px;
-      background-color: $bg-black;
-      color: $font-white;
+      background-color: var(--bg-black);
+      color: var(--font-white);
       @media (--viewport-desktop) {
         display: none;
         background-color: transparent;
@@ -131,7 +131,7 @@
         transition: all 0.3s;
         font-weight: bold;
         @media (--viewport-desktop) {
-          color: $font-white;
+          color: var(--font-white);
           border: none;
           padding: 0;
           display: block;
@@ -165,10 +165,10 @@
         &:hover,
         &.active {
           a {
-            color: $blue-dark;
-            border-left-color: $blue-dark;
+            color: var(--blue-dark);
+            border-left-color: var(--blue-dark);
             @media (--viewport-desktop) {
-              color: $blue-light;
+              color: var(--blue-light);
             }
           }
         }
