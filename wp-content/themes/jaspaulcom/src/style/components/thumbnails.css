@@ -8,7 +8,7 @@
     margin: 0 auto;
   }
 
-  li {
+  & li {
     overflow: hidden;
     position: relative;
     display: flex;
@@ -40,7 +40,7 @@
       }
     }
   }
-  h3 {
+  & h3 {
     position: absolute;
     background: rgba($main-color1, 0.6);
     left: 0;
@@ -64,7 +64,8 @@
       bottom: auto;
     }
     &:before {
-      @include icon($fa-var-plus-circle);
+      content: '+';
+      display: inline-block;
       position: absolute;
       font-size: 25px;
       margin: -30px 0 0 0;
@@ -75,10 +76,10 @@
       }
     }
   }
-  a {
+  & a {
     width: 100%;
   }
-  img {
+  & img {
     transition: all 3s;
     width: 100%;
     height: auto;

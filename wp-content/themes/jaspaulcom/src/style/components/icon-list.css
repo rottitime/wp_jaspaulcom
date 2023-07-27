@@ -2,7 +2,7 @@
   @media (--viewport-tablet) {
     display: flex;
   }
-  li {
+  & li {
     position: relative;
     padding-left: 62px;
     box-sizing: border-box;
@@ -34,11 +34,11 @@
       }
     }
 
-    h4 {
+    & h4 {
       margin-bottom: 7px;
     }
 
-    a {
+    & a {
       font-size: 13px;
     }
   }

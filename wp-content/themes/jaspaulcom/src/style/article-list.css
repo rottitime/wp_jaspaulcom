@@ -3,16 +3,16 @@
   flex-wrap: wrap;
 
   @media (--viewport-tablet) {
-    margin: -$thumbnail-spacing;
+    margin: var(--thumbnail-spacing);
   }
 
-  h2 {
+  & h2 {
     font-size: 20px;
   }
 
-  article {
+  & article {
     border-radius: 6px;
-    box-shadow: 0 1px 4px rgba($font-black, 0.26);
+    box-shadow: 0 1px 4px color-mod(var(--font-black) a(0.26));
     transition: all 0.5s;
     padding: 25px 20px;
     width: calc(50% - #{$thumbnail-spacing * 2});
@@ -27,18 +27,18 @@
     }
 
     &:hover {
-      box-shadow: 0 15px 30px rgba($font-black, 0.15);
+      box-shadow: 0 15px 30px color-mod(var(--font-black) a(0.15));
     }
 
-    //image
-    > a {
+    /* image */
+    & > a {
       margin-bottom: var(--content-spacing);
       height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
 
-      img {
+      & img {
         max-width: 100%;
         max-height: 100%;
         width: auto;
