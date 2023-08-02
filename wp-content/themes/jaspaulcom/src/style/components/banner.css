@@ -1,11 +1,10 @@
 .banner {
   padding: 50px 0 0 0;
-  background: $bg-black url($main-path-images + 'bg1.png') center fixed;
+  /* background: $bg-black url($main-path-images + 'bg1.png') center fixed; */
+  background: var(--bg-black) url('../../bg1.png') center fixed;
   background-size: 200%;
   text-align: center;
-  -webkit-animation: banner-shrink 20s;
   animation: banner-shrink 20s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 
   & h1 {

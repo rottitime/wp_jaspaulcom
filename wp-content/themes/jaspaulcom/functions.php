@@ -42,6 +42,14 @@ add_action( 'init', 'jaspaulcom_menus' );
 function jaspaulcom_register_styles() {
     $version = wp_get_theme()->get( 'Version' );
     wp_enqueue_style( 'jaspaulcom-style', get_template_directory_uri() . '/style.css', array(), $version, 'all' );
+
+
+    if (is_dev()) {
+        echo "Have a good day!";
+    } else {
+        echo "Have a good night!";
+    }
+
 }
 
 

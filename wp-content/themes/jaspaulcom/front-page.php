@@ -9,18 +9,20 @@ $idClient  = 6;
 
 
 
-<section class="banner">
-<div class="container">
+<!-- <section class="banner">
+<div class="container"> -->
 
 
 <?php
  if( have_posts() ): while( have_posts() ): the_post(); ?>
-        <h1><?php the_title(); ?></h1>
+        
         <hr>
         <?php the_content(); ?>
-        <hr>
+        
+        
 <?php endwhile; endif; ?>
 
+<h1><?php the_title(); ?></h1>
 <hr>
 *** 
 

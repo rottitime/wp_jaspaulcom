@@ -20,14 +20,18 @@ wp_head();
 <?php 
 
 
-
-if (is_dev): ?>
+/*
+if (is_dev): 
+?>
     <!-- loaclhost vite files -->
     <script type="module" src="http://localhost:5174/src/main.ts" defer></script>
 <?php else: ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dist/style.css">
     <script type="module" src="<?php echo get_template_directory_uri(); ?>/dist/script.js"></script>
-<?php endif; ?>
+<?php endif; 
+*/
+
+?>
 
 </head>
 <body>

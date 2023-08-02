@@ -8,6 +8,7 @@ import postcssInlineSvg from 'postcss-inline-svg'
 import postcssColorModFunction from 'postcss-color-mod-function'
 
 export default defineConfig({
+  base: './',
   server: {
     port: 5174
   },
